@@ -16,6 +16,7 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
         );
 
         setBodyParts(['all', ...bodyPartsData]);
+        // console.log(bodyPartsData);
       } 
 
       fetchExercisesData();
@@ -33,6 +34,7 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
         );
 
         setSearch('');
+        // console.log(searchedExercises);
         setExercises(searchedExercises);
       }
     }
@@ -65,7 +67,7 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
           </Button>
         </Box>
         <Box sx={{position: 'relative', width: '100%', p: '20px'}}>
-          <HorizontalScrollBar data={bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+          <HorizontalScrollBar data={bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart} bodyParts />
         </Box>
       </Stack>
     )
